@@ -42,7 +42,9 @@ El servidor queda disponible en `http://localhost:8080`.
 
 ## Variables de entorno
 
-El archivo `.env` se incluye en el repositorio, tal como pide la consigna. `.env.example` sirve de plantilla.
+El archivo `.env` se incluye en el repositorio, tal como pide la consigna, **solo con valores de desarrollo local**: la base de datos apunta a `localhost`, no hay credenciales de correo y los secretos (`JWT_SECRET`, `COOKIE_SECRET`, `RESET_PASSWORD_SECRET`) son valores de ejemplo. `.env.example` sirve de plantilla.
+
+> **Importante:** en un entorno real, estos secretos deben reemplazarse por valores largos y aleatorios (por ejemplo, `node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"`) y el `.env` no debe subirse al repositorio.
 
 | Variable                    | Descripción                                                          |
 | --------------------------- | -------------------------------------------------------------------- |
